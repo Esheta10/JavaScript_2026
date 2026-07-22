@@ -106,4 +106,14 @@ console.log(test);
 const characters = ["Iron Man", "Hulk", ["Captain America"],["Black Widow", ["Hawkeye", "Black Panther"]]]
 console.log(characters.flat(2));
 
+// Sort method in arrays
+let unsorted_nums = [10, 20, 5];
+console.log(unsorted_nums.sort()); // Wrong answer [10,20,5] since it's sorting string-wise
+
+// Correct Approach -
+const tim_sort = unsorted_nums.sort((a,b) => {
+    return a-b;
+})
+
+console.log(tim_sort);
 
