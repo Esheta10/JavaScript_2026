@@ -77,3 +77,15 @@ const filteredUsers = users.filter((user) => {
 console.log(filteredUsers)
 
 
+// question-5
+const products = [
+    {id: 1, name: "Iphone 14"},
+    {id: 2 , name: "Samsung Galaxy"},
+    {id: 3, name: "Google Pixel"}
+]
+
+const filteredProducts = products.map((product) => {
+    console.log(product.name);
+})
+
+console.log(filteredProducts)
