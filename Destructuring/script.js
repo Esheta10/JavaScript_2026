@@ -84,8 +84,45 @@ const products = [
     {id: 3, name: "Google Pixel"}
 ]
 
-const filteredProducts = products.map((product) => {
-    console.log(product.name);
+const searchKeyword = "Google"
+const filteredProducts = products.filter((product) => {
+    return product.name.toLowerCase().includes(searchKeyword.toLowerCase());
 })
 
 console.log(filteredProducts)
+
+// question-6
+const comments = [
+    {postId: 1, text: "Great post!"},
+    {postId: 2, text: "Thanks!"},
+    {postId: 1, text: "Very helpful!"}
+]
+
+function groupByPosts(comments){
+
+    let groupedComments = {};
+
+    comments.forEach(obj => {
+        if(groupedComments.hasOwnProperty(obj.postId)){ // matlab pehle se postId present hai
+            groupedComments[obj.postId].push(obj.text)
+        } else {
+            groupedComments[obj.postId] = [obj.text] // new postId create karo and usme comment daalo
+        }
+    })
+    console.log(groupedComments)
+}
+
+console.log(groupByPosts(comments))
+
+// question- 7
+const params = {
+    search: "laptop",
+    page: 2,
+    sort: "price"
+}
+
+function searchURL(params){
+    console.log(`search=${params.search}&page=${params.page}&sort=${params.sort}`)
+}
+
+searchURL(params);
