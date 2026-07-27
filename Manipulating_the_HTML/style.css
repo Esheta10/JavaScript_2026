@@ -1,0 +1,10 @@
+div{
+    background-color: lightgreen;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+p{
+    border: 4px solid black;
+    padding: 10px;
+}
