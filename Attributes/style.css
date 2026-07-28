@@ -1,0 +1,13 @@
+.box{
+    background-color: sandybrown;
+}
+.div1{
+    background-color: maroon;
+    color: bisque;
+}
+.red-text{
+    color: maroon;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 20px;
+}
