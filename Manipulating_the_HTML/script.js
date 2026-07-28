@@ -26,5 +26,25 @@
 let div = document.querySelector("div")
 console.log(div);
 
-let para1 = document.querySelector(".para-1")
-para1.style.backgroundColor = "blue"
+let para2 = document.querySelector(".para-2");
+para2.style.backgroundColor = "blue";
+
+let parentNode = para2.parentNode;
+
+// Create a single element to append
+let newPara = document.createElement("p");
+newPara.innerText = "Learning about parentNode.replaceChild property";
+
+// Add the new <p> node after para2
+para2.after(newPara);
+
+
+// parentNode.replaceChild(newPara, para2);
+
+// parentNode.removeChild(newPara)
+
+parentNode.append(newPara)
+
+
+let childrens = div.children
+console.log(childrens)
