@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+.heading{
+  /* 1. Define the linear gradient background */
+  background: linear-gradient(165deg, #b66798, #370670);
+
+  /* 2. Clip the background to the text */
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  /* 3. Make the text transparent so the background shows through */
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.container{
+    background-color: rgb(196, 163, 228);
+    height: 100vh;
+    text-align: center;
+    padding: 50px;
+}
+.inputBtnContainer{
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 40px;
+}
+.randomBtn{
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: aquamarine;
+    font-weight: bold;
+    transition: all linear 0.2s;
+}
+.randomBtn:active{
+    scale: 0.9;
+}
+.applyBtn{
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: aquamarine;
+    font-weight: bold;
+    transition: all linear 0.2s;
+}
+.applyBtn:active{
+    scale: 0.9;
+}
+#colorInput{
+    padding: 10px 40px;
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+}
+.currentColor{
+    margin: 20px;
+    width: 250px;
+    height: 40px;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid black;
+    font-weight: 600;
+    margin: auto;
+    background-color: blueviolet;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: box-shadow 0.3s ease;
+}
+
+.currentColor:hover {
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.5);
+  transform: translateY(-2px);
+}
