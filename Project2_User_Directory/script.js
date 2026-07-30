@@ -51,7 +51,7 @@ function renderUsers(arr) {
   });
 }
 
-renderUsers(arr);
+renderUsers(arr); // for initial render
 
 function handleSearch(e){
 
