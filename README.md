@@ -21,3 +21,8 @@
 
 <img width="341" height="484" alt="image" src="https://github.com/user-attachments/assets/7d91bfca-8080-48c5-8894-873c9e33050b" />
 
+## Animated Cursor
+
+<img width="608" height="381" alt="image" src="https://github.com/user-attachments/assets/9d44d58a-1b8a-4353-946e-107f8b590156" />
+
+
