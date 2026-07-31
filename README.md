@@ -9,8 +9,7 @@
 ## User Directory
 #### A profile management or search interface designed to display, organize, and filter a directory of users, making it easy to browse through user information and details efficiently.
 
-<img width="471" height="535" alt="image" src="https://github.com/user-attachments/assets/c3430dc1-b5ce-4bd2-b264-f7d4bbbd5b29" />
-
+<img width="400" height="471" alt="image" src="https://github.com/user-attachments/assets/c41f60a8-61a7-4425-a038-d9775f95dd94" />
 
 <img width="457" height="525" alt="image" src="https://github.com/user-attachments/assets/60fad780-58a0-4d65-9c6a-1f15bf55347d" />
 
