@@ -9,9 +9,9 @@
 ## User Directory
 #### A profile management or search interface designed to display, organize, and filter a directory of users, making it easy to browse through user information and details efficiently.
 
-<img width="400" height="471" alt="image" src="https://github.com/user-attachments/assets/c41f60a8-61a7-4425-a038-d9775f95dd94" />
+<img width="441" height="533" alt="image" src="https://github.com/user-attachments/assets/20620d24-51e9-4ede-a42c-b6beb9d453ba" />
 
-<img width="457" height="525" alt="image" src="https://github.com/user-attachments/assets/60fad780-58a0-4d65-9c6a-1f15bf55347d" />
+<img width="446" height="534" alt="image" src="https://github.com/user-attachments/assets/3fe8dc5f-927b-4ef6-8f4e-29f8717842fe" />
 
 ## To Do List
 #### A productivity app for task management. Users can add new tasks, check off completed items, and organize their daily agendas to stay on top of their goals.
