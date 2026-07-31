@@ -15,3 +15,9 @@
 
 <img width="443" height="528" alt="image" src="https://github.com/user-attachments/assets/a8bd186d-ec12-4fc4-869a-571666b2997b" />
 
+## Simple Calculator
+
+<img width="318" height="484" alt="image" src="https://github.com/user-attachments/assets/db3e49b3-2e71-4cc1-bc99-56a3e2409c52" />
+
+<img width="341" height="484" alt="image" src="https://github.com/user-attachments/assets/7d91bfca-8080-48c5-8894-873c9e33050b" />
+
