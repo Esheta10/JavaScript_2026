@@ -30,4 +30,12 @@
 
 <img width="608" height="381" alt="image" src="https://github.com/user-attachments/assets/9d44d58a-1b8a-4353-946e-107f8b590156" />
 
+## Number Shooter Game
+#### This project is a browser-based "Number Shooter" game where players score points by quickly clicking matching target numbers on the screen. It utilizes event delegation for efficient click handling alongside dynamic target generation, real-time score tracking, and a countdown timer.
+
+<img width="891" height="362" alt="image" src="https://github.com/user-attachments/assets/b92aeb70-b616-4e63-ae7e-6f999a721a42" />
+<img width="898" height="352" alt="image" src="https://github.com/user-attachments/assets/134fd30e-2337-487b-95da-84f7604103b7" />
+
+
+
 
