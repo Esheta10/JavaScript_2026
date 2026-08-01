@@ -17,8 +17,13 @@ parent.addEventListener("click", (event)=>{
     console.log("PARENT")
     console.log("event.target - ",event.target)
     console.log("event.currentTarget - ",event.currentTarget)
-    event.stopPropagation();
+    console.log("Parent -> Event-Listener 1")
+    event.stopImmediatePropagation();
 
+})
+
+parent.addEventListener("click", (event) => {
+    console.log("Parent -> Event-Listener 2")
 })
 
 child.addEventListener("click", (event)=>{
