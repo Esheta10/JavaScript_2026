@@ -447,5 +447,233 @@ console.log(given_array); //[ 2, 3, 5, 4, 1 ]
 
 // used the concept of array destructuring for swapping the values
 
+//37. What is a pure function, and why is it useful in UI rendering?
+
+/**
+ * Pure functions -> same input pe same output dete hain
+ * Predictable: Data same hoga toh UI par bhi same dikhega
+ * Fast Performance: agar data change nahi hua ho toh React puraane UI ko hi resue kar lete hain instead of re-rendering
+ * Easy-testing: Pure functions ko test ya debug karna easy hota hai
+ */
+
+
+/**40. Explain immutability and how you would update an object in an array
+ *  without mutating the original. */
+
+
+// hum .map() ans ... spread operator ka use karte hain to update original array without mutating 
+// qki ye new array mein result store karte hain
+
+// We have to update the price of product with id:2 from 2000 to 2500
+
+const products = [
+    { id: 1,
+      name: "jeans",
+      price: 800
+    },
+    {
+        id:2,
+        name: "dress",
+        price: 2000
+    },
+    {
+        id:3,
+        name: "T-shirt",
+        price:500
+    }
+]
+
+const updatedProduct = products.map((product) => {
+
+    if(product.id === 2){
+        return {...product, price: 2500}
+    }
+    return product;
+})
+
+console.log(products);
+console.log(updatedProduct);
+
+
+/**41. How would you compose multiple functions to transform data step-by-step (e.g., sanitize → trim →
+capitalize)? Scenario: You’re preparing user input before storing it. (Expected knowledge: Function
+composition, chaining, pipe or compose logic.) */
+
+/**43. How do you implement your own version of .map() function on arrays? */
+
+// forEach() loop existing array ko mutate/change karne ke liye use hota hai
+// map() returns a new array after implementing the transformations
+
+// forEach() always returns undefined
+// map() returns a new array of modified elements
+
+// forEach() ke saath .filter(), .reduce() methods ka use karke method chaining nahi kar sakte
+// map() ke saath .filter(), .reduce() methods ka use karke method chaining kar sakte hain
+
+/**43. How do you implement your own version of .map() function on arrays? */
+
+/**44. Guess the Output: */
+
+let date = new Date(0);
+console.log(date.toString()) //Thu Jan 01 1970 05:30:00 GMT+0530 (India Standard Time)
+
+/**45. Validate that a user's selected date range is no longer than 30 days. */
+
+let nowTimeStamp = Date.now();
+console.log(nowTimeStamp); // current epoch timestamp in milliseconds
+ 
+let nowDate = new Date(1785849582536)
+console.log(nowDate); // 2026-08-04T13:19:42.536Z
+
+let userDate = new Date("2025-08-04T12:00:00.000Z")// user selected date in fixed string format
+console.log(userDate); //2025-08-04T12:00:00.000Z
+
+let difference = nowDate - userDate; // this will get millisecond difference
+
+let differenceInDays = difference/(1000*60*60*24);
+console.log(Math.floor(differenceInDays).toLocaleString()); //365
+
+if(differenceInDays > 30){
+    console.log("Invalid selected date: exceeding the 30 days range"); //Invalid selected date: exceeding the 30 days range
+}
+
+/**46. Calculate difference between two dates in the format of “_ years _ months _days _ hours _ minutes _ sec”. */
+
+let start = "2026-08-04T12:00:00"
+let end = "2026-11-10T08:10:00"
+
+function getExactDateDifference(start, end){
+
+    let startDate = new Date(start)
+    let endDate = new Date(end)
+
+    if(startDate > endDate){    // pehle ensure karo ki start date humesha choti ho 
+
+        let temp = startDate;
+        startDate = endDate;
+        endDate = temp;
+    }
+
+    let years = endDate.getFullYear() - startDate.getFullYear();
+    let months = endDate.getMonth() - startDate.getMonth();
+    let days = endDate.getDate() - startDate.getDate();
+    let hours = endDate.getHours() - startDate.getHours();
+    let minutes = endDate.getMinutes() - startDate.getMinutes();
+    let seconds = endDate.getSeconds() - startDate.getSeconds();
+
+    // negative seconds ko adjust karein
+    if(seconds < 0){
+        seconds += 60;
+        minutes--;
+    }
+
+    // negative minutes ko adjust karein
+    if(minutes < 0){
+        minutes += 60;
+        hours--;
+    }
+
+    //negative hours ko adjsut karein
+    if(hours<0){
+        hours+=24;
+        days--;
+    }
+
+    // negative day ko adjust karein --> pichle month ke days ko borrow karke
+    if(days<0){
+
+        let previousMonth = new Date(endDate.getFullYear(), endDate.getMonth(), 0);
+        days += previousMonth.getDate();
+        months--;
+    }
+
+    // negative months ko adjust karein
+    if(months<0){
+        months+=12;
+        years--;
+    }
+    return `${years} years ${months} months ${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`
+}
+console.log(getExactDateDifference(start, end));    // 0 years 3 months 5 days 20 hours 10 minutes 0 seconds
+
+
+/**47. Add or subtract n days from a given date. (E.g., Add 7 days to "2025-05-01“) **/
+
+
+function addDays(dateInput, days){
+
+    const date = new Date(dateInput);
+    date.setDate(date.getDate() + days); // add or subtract 'n' days from date
+
+    // Formatted Date Output
+    return date.toLocaleString("en-CA"); // output format: YYYY-MM-DD
+}
+
+console.log(addDays("2026-08-04", +7)); //2026-08-11, 5:30:00 a.m.
+console.log(addDays("2026-08-04", -7)); //2026-07-28, 5:30:00 a.m.
+
+/**48. Calculate the user's age from their date of birth. */
+
+let dob = "2009-11-10";
+
+function calculateAge(dob){
+
+    let date =  new Date();
+    let birthDate = new Date(dob);
+
+    // current year mein se birth year subtract karein
+    let age = date.getFullYear() - birthDate.getFullYear();
+
+    // month diference check karein
+    let monthDiff = date.getMonth() - birthDate.getMonth();
+
+    // agar birthday iss saal abhi tak nahi aaya hai, toh 1 year subtract karein , similarly agar monthDiff === 0 ho aur aaj ka date,
+    // birthday date se chota ho toh bhi subtract karein age
+    if(monthDiff < 0 || monthDiff === 0 && date.getDate() < birthDate.getDate()){
+            age--;
+    }
+    return age;
+}
+
+console.log(calculateAge(dob)); // 16
+
+/**49. Write a formatDate(dateStr) function that returns a user-friendly format like Jan 1, 2026. Why is it better to
+centralize this logic in a utility? */
+
+const dateStr = "2026-01-01";
+
+function formattedDate(dateStr){
+
+    let date  = new Date(dateStr);
+    console.log(date); //2026-01-01T00:00:00.000Z
+
+    if(isNaN(date.getTime()))
+        return "Invalid Date";
+
+    // Output formatted string: MMM D YYYY
+    const options = {
+        month: "short",
+        day: "numeric",
+        year: "numeric"
+    }
+
+    console.log(date.toLocaleString("en-IN", options));
+}
+
+console.log(formattedDate(dateStr)); // 1 Jan 2026
+
+/**50. What are the different options and parameters available in toLocaleString and toLocaleDateString etc to
+format date. Requested output: Tuesday, August 4, 2026 */ 
+
+const aajKaDate = new Date("2026-08-04T20:35:00");
+
+const options = {
+    weekday: "long",
+    month: "long",
+    day: "numeric",
+    year: "numeric"
+}
+
+console.log(aajKaDate.toLocaleString("en-IN", options)); //Tuesday, 4 August 2026
 
 

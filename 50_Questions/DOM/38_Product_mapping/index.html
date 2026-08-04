@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Mapping</title>
+    <style>
+        .product-list {
+            display: flex;
+            flex-direction: row; /* Arranges children horizontally */
+            gap: 20px;           /* Adds space between cards */
+            flex-wrap: wrap;     /* Allows cards to wrap to the next line on smaller screens */
+            }
+        .product-card{
+            width: 200px;
+            height: 300px;
+            background-color: lightgreen;
+            display: flex;
+            flex-direction: column;/* Stack contents inside the card vertically */
+            justify-content: space-between;/* Valid value to space contents top-to-bottom */
+            padding: 10px;/* Gives text breathing room inside the card */
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="product-list">
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
