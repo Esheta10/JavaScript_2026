@@ -4,9 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Closest Ancestor</title>
+    <style>
+        #grand-parent{
+            padding: 30px;
+            background-color: orange;
+        }
+        #parent{
+            padding: 15px;
+            background-color:lightblue;
+        }
+        #child{
+            padding: 5px;
+            background-color: blanchedalmond;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="parent" id="grand-parent"> GRANDPARENT
+        <div class="parent" id="parent"> PARENT
+            <div id="child">
+                CHILD
+            </div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
