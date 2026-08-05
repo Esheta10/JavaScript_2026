@@ -499,7 +499,19 @@ console.log(updatedProduct);
 capitalize)? Scenario: You’re preparing user input before storing it. (Expected knowledge: Function
 composition, chaining, pipe or compose logic.) */
 
-/**43. How do you implement your own version of .map() function on arrays? */
+// Reuse and Compose
+
+let person_name = "Esheta Jaiswal"
+
+let toLower = (str) => str.toLowerCase();
+let removeSpaces = (str) => str.replaceAll(" ","");
+let addAtTheRate = (str) => "@" + str;
+
+let output = (addAtTheRate(removeSpaces(toLower(person_name))));
+console.log(output); //@eshetajaiswal
+
+
+/**42. What is the difference between forEach and map, and when is it wrong to use map? */
 
 // forEach() loop existing array ko mutate/change karne ke liye use hota hai
 // map() returns a new array after implementing the transformations
