@@ -232,3 +232,13 @@ function pipe(...fns){
 const pipeResult = pipe(add2, multiply5, subtract10)(5)
 console.log(pipeResult); // 25
 
+// Polfills
+
+Array.prototype.pehlaElement = function(){
+    return this[0];
+}
+
+const arrPoly = [12,34,56,78,90];
+console.log(arrPoly.pehlaElement()) // 12
+
+
