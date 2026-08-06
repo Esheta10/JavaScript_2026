@@ -25,17 +25,56 @@ function BankAccount(holdersName, balance = 0){
     this.holdersName = holdersName;
     this.balance = balance;
 
-    this.deposit = function(balance){
-        this.balance += balance;
-    }
+    // this.deposit = function(balance){
+    //     this.balance += balance;
+    // }
 
-    this.withdraw = function(balance){
-        this.balance -= balance;
-    }
+    // this.withdraw = function(balance){
+    //     this.balance -= balance;
+    // }
+}
+
+BankAccount.prototype.deposit = function(balance){
+    this.balance += balance
+    console.log(`Depsited amount: ${this.balance}`)
+}
+
+BankAccount.prototype.withdraw = function(balance){
+    this.balance -= balance;
+    console.log(`Withdrawn amount: ${this.balance}`)
 }
 
 let myAccount = new BankAccount("Esheta",1000);
-myAccount.deposit(500);
+let riyaAccount = new BankAccount("Riya",5000);
+
+myAccount.deposit(600);
 console.log(myAccount);
-myAccount.withdraw(100);
+myAccount.withdraw(200);
 console.log(myAccount);
+
+console.log("--------------------------------------------")
+
+riyaAccount.deposit(400);
+console.log(riyaAccount);
+riyaAccount.withdraw(100);
+console.log(riyaAccount);
+
+
+// Class Syntax (es6)
+
+class ClassStudent {
+   constructor(name,age){
+    this.name = name;
+    this.age = age;
+   }
+   introduce(){
+    console.log(`Name is: ${this.name} and age is ${this.age}.`)
+   }
+}
+
+let s3 = new ClassStudent("Pam", 25);
+let s4 = new ClassStudent("Jim",26)
+
+console.log(s3);
+console.log(s4);
+
