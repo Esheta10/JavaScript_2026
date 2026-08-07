@@ -1,0 +1,119 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: white;
+}
+
+header{
+    margin: auto;
+}
+.container{
+    background-color: rgba(75, 74, 74, 0.596);
+    width: fit-content;
+    margin: 50px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* 'center' ki jagah 'stretch' lagayein taaki child elements poori width lein */
+    justify-content: center;
+    border-radius: 5px;
+    gap: 20px;
+}
+.input-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+#inputText{
+    padding: 7px 10px;
+    border-radius: 5px;
+    flex-grow: 1;
+}
+.addBtn{
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color:rgba(122, 132, 143, 0.918);
+    border: none;
+}
+.addBtn:active{
+    opacity: 0.7;
+}
+
+.todo-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+.todo{
+    width: 100%; /* Pooere width me extend ho kar start se align hoga */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 15px;
+    background-color: rgb(19, 17, 17);
+    border-radius: 4px;
+}
+
+.todo span {
+    font-size: 18px;
+}
+.actions{
+    display: flex;
+    gap: 8px;
+}
+
+.editBtn{
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color:rgba(122, 132, 143, 0.918);
+    margin-left: 20px;
+    border: none;
+}
+.editBtn:active{
+    opacity: 0.7;
+}
+.deleteBtn{
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color:rgba(122, 132, 143, 0.918);
+    border: none;
+}
+.deleteBtn:active{
+    opacity: 0.7;
+}
+.saveBtn{
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color:rgba(122, 132, 143, 0.918);
+    border: none;
+    display: none;
+}
+.save:active{
+    opacity: 0.7;
+}
+
+.todo .editInput{
+    display: none;
+}
