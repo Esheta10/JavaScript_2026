@@ -1,7 +1,6 @@
 ## Color Switcher
 #### An interactive tool that allows users to dynamically change the background or theme color of the page. It features options to pick a random color instantly, type in a custom color value, and display the current active color.
 
-<img width="738" height="236" alt="image" src="https://github.com/user-attachments/assets/fe4a23c2-9ae6-459f-93de-64688f92fc3d" />
 <img width="651" height="217" alt="image" src="https://github.com/user-attachments/assets/7698d90e-e005-4f9b-8e4e-37265a50a264" />
 
 <img width="656" height="190" alt="image" src="https://github.com/user-attachments/assets/f92d781f-fecf-4d18-91d0-3956f43e4ffe" />
