@@ -39,9 +39,8 @@
 ## TaskAsync
 #### TaskAsync is a sleek, dynamic To-Do application built with vanilla JavaScript, HTML, and CSS. It seamlessly performs full CRUD operations (Create, Read, Update, Delete) using asynchronous Fetch API requests to manage tasks in real time.
 
-<img width="368" height="536" alt="image" src="https://github.com/user-attachments/assets/6f18a263-b6e2-409d-94fb-7035a8f5c32e" />
+<img width="385" height="511" alt="image" src="https://github.com/user-attachments/assets/c9c51224-6d1f-4585-94a1-ef30797da65a" />
 <img width="418" height="502" alt="image" src="https://github.com/user-attachments/assets/c2652a9e-2d74-4ce4-9490-41511c553a09" />
-
 
 
 
